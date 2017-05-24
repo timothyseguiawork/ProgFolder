@@ -1,3 +1,4 @@
+K#Exercise 3: Numbers and Math
 print "I will now count my chickens: "
 # Goes by precedence - left to right.
 print "Hens", 25 + 30 / 6
