@@ -17,3 +17,8 @@ print tabby_cat
 print persian_cat
 print backslash_cat
 print fat_cat
+
+# So this is an infinite loop that prints out all of the characters within the for statement.
+# while True:
+#     for i in ["/","-","|","\\","|"]:
+#         print "%s\r" % i,
