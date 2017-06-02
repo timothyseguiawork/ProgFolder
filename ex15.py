@@ -15,22 +15,33 @@
 # What we want to do is "open" that file in our script ad print it out.
 # We don't want to hardcode the name ex15_sample.txt into our script.
 
-from sys import argv
+from sys import argv # Importing sys library/module
 
-script, file_name = argv
+script, file_name = argv # Stores script name as script and 1st argument as file_name
 prompt = "> "
-txt = open(file_name)
+txt = open(file_name) # We open that file_name afterwards
 
 print "Here's your file %r" % file_name
 print txt.read() # Unlike C, we don't need to worry about end of files, Python just reads through the whole thing.
+txt.close()
+print "Type the file_name again: (ex15_sample.txt)"
+file_again = raw_input(prompt) # Ask user to input the name of the same file.
 
-print "Type the file_name again:"
-file_again = raw_input(prompt)
+txt_again = open(file_again) # Open the file once again, in order to read from it.
 
-txt_again = open(file_again)
-
-print txt_again.read()
-
+print txt_again.read() # Prints out all of the text within the file.
+txt_again.close()
 # Lines 18 - 19 use argv to get a file name. Next we have line 5 where we use a new command, open.
 # pydoc open and read the instructions.
 # Line 24 prints a little message - but on line
+
+# Study Drills
+# 1 Above each line, write out in english what the line does.
+# 2 If you are not sure ask someone for help or search online. Many times searching for "python THING"
+#       will find answers to what that THING does in python. Try searching for "python open"
+# 3 I used the word "commands" here, but commands are also called "functions" and "methods"
+#       You will learn about functions and methods later in the book.
+# 4 Get rid of lines 27 - 32 where you use raw_input and run the script again.
+# 5 Use only raw_input and try the script that way. Why is one way of getting the file name better than the other?
+# 6 Start Python to start the python shell and use open from the prompt just like in this program.
+# 7 Have your script also call close() on the txt and txt_again variables. It's Important to close files when you are done with them.
