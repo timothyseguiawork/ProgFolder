@@ -30,11 +30,11 @@ print "Opening the file..."
 target = open(filename, 'w') # Opening the file for writing.
 
 print "Truncating the file. Goodbye!"
-target.truncate()
-
+target.truncate() # Truncates the file's size. If the optional size arugment is present, the file is truncated to (at most) that size.
+# Size defaults to the current position. Method does not work in case file is opened in read-only mode.
 print "Now I'm going to ask you for three lines."
 
-line1 = raw_input("line 1: ")
+line1 = raw_input("line 1: ") # Three separate lines of input in a newly created file.
 line2 = raw_input("line 2: ")
 line3 = raw_input("line 3: ")
 
@@ -63,3 +63,10 @@ target.close()
 #       you want to write a file.
 # 5 If you open the file with 'w' mode, then do you really need the target.truncate()? Read the documentation for Python's open
 #       function and see if that's true.
+
+# Common Student Questions
+# What does "w" mean?
+#   It's really just a string with a chracter in it for the kind of mode for the file. If you use "w" then you're opening this file for writing.
+#   "a" for append "r" for read.
+# Does just doing open(filename) open it in "r" (read) mode?
+#   Yes, that's the default for the open() function. 
